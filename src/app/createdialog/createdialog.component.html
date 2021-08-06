@@ -1,0 +1,29 @@
+<form  [formGroup]="formGroup">
+   <h3 align="center" >Add new Post</h3>
+
+    <div class="mb row">
+        <label for="postid" class="col-sm-2 col-form-label">Post Id</label>
+        <div class="col-sm-10">
+          <input type="number" class="form-control" id="postid" formControlName="post_id">
+        </div>
+      </div>
+      <div class="mb row">
+        <label for="postcontent" class="col-sm-2 col-form-label">Post Content</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="postcontent" formControlName="content">
+        </div>
+      </div>
+     
+     
+  <div class="mb row">
+    <label for="posttitle" class="col-sm-2 col-form-label">Post Title</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="posttitle" formControlName="title">
+    </div>
+  </div>
+ 
+</form>
+<mat-dialog-actions>
+    <button  mat-stroked-button mat-dialog-close>Cancel</button>
+    <button mat-stroked-button  mat-dialog-close color="accent" (click)="getForm()" [disabled]="formGroup.invalid">Add</button>
+  </mat-dialog-actions>

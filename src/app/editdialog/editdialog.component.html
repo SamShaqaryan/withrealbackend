@@ -1,0 +1,36 @@
+
+<h3 align="center">Change Selected post</h3>
+<form class="container" [formGroup]="formGroup">
+  <div class="row">
+    <div class="col-6">
+      <label for="title"
+        >Change Title
+        <input
+          type="text"
+          id="title"
+          class="form-control "
+          formControlName="title"
+        />
+      </label>
+    </div>
+    <div class="col-6">
+      <label for="content"
+        >Change Content
+        <input
+          type="text"
+          class="form-control "
+          id="content"
+          formControlName="content"
+        />
+      </label>
+    </div>
+  
+  </div>
+  <div class="btns">
+  </div>
+</form>
+
+<mat-dialog-actions>
+    <button  mat-stroked-button mat-dialog-close>Cancel</button>
+    <button mat-dialog-close mat-raised-button color="warn"   (click)="submit()">Edit</button>
+  </mat-dialog-actions>
